@@ -1,0 +1,26 @@
+int delay_ms=200;
+int arr_pin[3]={25,26,27};
+int i,j;
+void setup() {
+  // put your setup code here, to run once:
+  for(i=0;i<3;i++){
+    pinMode(arr_pin[i],OUTPUT);
+  }
+  delay(200);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  for(i=0;i<3;i++){
+    digitalWrite(arr_pin[i],HIGH);
+    delay(delay_ms);
+    digitalWrite(arr_pin[i],LOW);
+    delay(delay_ms);
+  }
+  for(j=3;j>0;j--){
+    digitalWrite(arr_pin[j],HIGH);
+    delay(delay_ms);
+    digitalWrite(arr_pin[j],LOW);
+    delay(delay_ms);
+  }
+}
